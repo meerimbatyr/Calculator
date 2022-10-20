@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 356px;
+  text-align: center;
+  border: 10px solid #101116;
+  background-color: #101116;
+  border-radius: 5px;
+}
+
+input {
+  width: 350px;
+  height: 75px;
+  background-color: #101116;
+  color: white;
+  border: none;
+  text-align: right;
+  font-size: 2.5rem;
+  font-weight: 700;
+  border: 0;
+  letter-spacing: 1px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.middle-line .numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 60px);
+}
+
+.top-line {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 60px;
+}
+
+.bottom-line {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 60px;
+}
+
+.rightside {
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+}
+
+.rightside .operations {
+  display: grid;
+  grid-template-rows: repeat(4, 60px);
+}
+
+button {
+  border-radius: 5px;
+  border: none;
+  margin: 5px;
+  transition: ease-in-out 0.5s;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.025);
+}
+
+.highlight {
+  background-color: salmon;
+}
+
+input:focus,
+button:active {
+  outline: none;
+}
